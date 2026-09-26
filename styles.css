@@ -1,0 +1,112 @@
+:root {
+  color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 240px;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.vip-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 420px);
+  margin: 0 auto;
+  padding: max(28px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom));
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: min(100%, 350px);
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.nameplate {
+  display: grid;
+  place-items: center;
+  width: min(100%, 348px);
+  aspect-ratio: 348 / 78;
+  background: url("assets/nameplate.png") center / 100% auto no-repeat;
+}
+
+h1 {
+  margin: 0;
+  padding: 0 18px;
+  color: #1b1302;
+  font-size: clamp(20px, 6vw, 26px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.date {
+  min-height: 26px;
+  margin: 14px 0 22px;
+  font-size: 22px;
+  line-height: 26px;
+  font-variant-numeric: tabular-nums;
+}
+
+.vip-badge {
+  display: block;
+  width: min(100%, 300px);
+  height: auto;
+}
+
+.check-in {
+  display: block;
+  flex: none;
+  margin: 22px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  opacity: 1;
+}
+
+.check-in img {
+  display: block;
+  width: 170px;
+  height: 70px;
+}
+
+.notice {
+  max-width: 300px;
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 360px) {
+  .vip-card {
+    padding-inline: 16px;
+  }
+
+  .logo {
+    margin-bottom: 24px;
+  }
+
+  .vip-badge {
+    width: min(100%, 260px);
+  }
+}

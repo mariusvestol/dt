@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Downtown VIP – Marius Vestøl.">
+    <title>Downtown VIP – Marius Vestøl</title>
+    <link rel="icon" type="image/png" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="vip-card" aria-label="Downtown VIP">
+      <img class="logo" src="assets/logo.png" alt="Club Downtown" width="700" height="190">
+
+      <div class="nameplate">
+        <h1>Marius Vestøl</h1>
+      </div>
+
+      <p class="date">
+        <span class="visually-hidden">Dagens dato: </span>
+        <time id="today"></time>
+      </p>
+      <noscript><p class="notice">Aktiver JavaScript for å vise dagens dato.</p></noscript>
+
+      <img class="vip-badge" src="assets/vip-badge.png" alt="VIP" width="721" height="717">
+
+      <button class="check-in" type="button" disabled aria-label="Sjekk inn – ikke tilgjengelig ennå" title="Innsjekking er ikke tilgjengelig ennå">
+        <img src="assets/checkin-button.png" alt="Sjekk inn" width="170" height="70">
+      </button>
+    </main>
+  </body>
+</html>
