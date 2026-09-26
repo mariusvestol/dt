@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   min-width: 240px;
@@ -17,68 +21,128 @@ body {
 }
 
 .vip-card {
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: min(100%, 420px);
   margin: 0 auto;
-  padding: max(28px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom));
+  padding: max(28px, env(safe-area-inset-top)) 0 max(28px, env(safe-area-inset-bottom));
   text-align: center;
 }
 
 .logo {
   display: block;
-  width: min(100%, 350px);
+  width: min(90%, 350px);
   height: auto;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 }
 
 .nameplate {
   display: grid;
   place-items: center;
-  width: min(100%, 348px);
-  aspect-ratio: 348 / 78;
+  width: 82%;
+  aspect-ratio: 348 / 174;
+  margin-top: 16px;
   background: url("assets/nameplate.png") center / 100% auto no-repeat;
 }
 
 h1 {
   margin: 0;
-  padding: 0 18px;
-  color: #1b1302;
-  font-size: clamp(20px, 6vw, 26px);
+  padding: 0 12px;
+  color: #080808;
+  font-size: 4.5cqw;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .date {
-  min-height: 26px;
-  margin: 14px 0 22px;
-  font-size: 22px;
-  line-height: 26px;
+  min-height: 22px;
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 22px;
   font-variant-numeric: tabular-nums;
 }
 
 .vip-badge {
   display: block;
-  width: min(100%, 300px);
+  width: min(78%, 300px);
   height: auto;
+}
+
+.benefits {
+  margin: 0;
+  font-size: 4.8cqw;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.benefits strong {
+  font-size: 9cqw;
+  font-weight: 700;
+}
+
+.check-in-area {
+  width: 100%;
+  margin-top: 32px;
 }
 
 .check-in {
   display: block;
-  flex: none;
-  margin: 22px 0 0;
+  margin: 0 auto;
   padding: 0;
   border: 0;
   border-radius: 0;
   background: transparent;
   opacity: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.check-in:focus-visible {
+  outline: 2px solid #e4c566;
+  outline-offset: 4px;
+}
+
+.check-in:disabled {
+  cursor: default;
+}
+
+.check-in:active {
+  transform: translateY(1px);
 }
 
 .check-in img {
   display: block;
   width: 170px;
   height: 70px;
+}
+
+.check-in-status {
+  margin: 0;
+  color: #dda7a4;
+  font-size: 4.3cqw;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.check-in-status:focus {
+  outline: none;
+}
+
+.instructions {
+  max-width: 96%;
+  margin: 30px 0 0;
+  font-size: 4.3cqw;
+  line-height: 1.4;
+}
+
+.instructions em {
+  font-style: italic;
+}
+
+.instructions strong {
+  font-weight: 700;
 }
 
 .notice {
@@ -95,18 +159,4 @@ h1 {
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
-}
-
-@media (max-width: 360px) {
-  .vip-card {
-    padding-inline: 16px;
-  }
-
-  .logo {
-    margin-bottom: 24px;
-  }
-
-  .vip-badge {
-    width: min(100%, 260px);
-  }
 }

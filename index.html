@@ -15,10 +15,6 @@
     <main class="vip-card" aria-label="Downtown VIP">
       <img class="logo" src="assets/logo.png" alt="Club Downtown" width="700" height="190">
 
-      <div class="nameplate">
-        <h1>Marius Vestøl</h1>
-      </div>
-
       <p class="date">
         <span class="visually-hidden">Dagens dato: </span>
         <time id="today"></time>
@@ -27,9 +23,24 @@
 
       <img class="vip-badge" src="assets/vip-badge.png" alt="VIP" width="721" height="717">
 
-      <button class="check-in" type="button" disabled aria-label="Sjekk inn – ikke tilgjengelig ennå" title="Innsjekking er ikke tilgjengelig ennå">
-        <img src="assets/checkin-button.png" alt="Sjekk inn" width="170" height="70">
-      </button>
+      <div class="nameplate">
+        <h1>Marius Vestøl</h1>
+      </div>
+
+      <p class="benefits">Pluss <strong>1</strong> stk og gratis inngang</p>
+
+      <div class="check-in-area" aria-live="polite" aria-atomic="true">
+        <button id="check-in" class="check-in" type="button" disabled>
+          <img src="assets/checkin-button.png" alt="Sjekk inn" width="170" height="70">
+        </button>
+        <p id="check-in-status" class="check-in-status" tabindex="-1" hidden>Kan sjekke inn: <time id="check-in-time"></time></p>
+      </div>
+
+      <p class="instructions">
+        <em>Innsjekk gjøres av dørvakt<br>og dere må komme samlet.<br>
+          <strong>* Du MÅ vise legitimasjon</strong>
+        </em>
+      </p>
     </main>
   </body>
 </html>

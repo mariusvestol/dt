@@ -4,7 +4,9 @@ Statisk nettside med de eksisterende Downtown-bildene, navnet **Marius Vestøl**
 
 Datoen hentes fra enhetens klokke når siden åpnes. Den oppdateres også mens siden står åpen over midnatt, og når fanen eller vinduet åpnes igjen. Det trengs ingen ny publisering for å bytte dato. Enhetens klokke må være riktig, og JavaScript må være aktivert.
 
-Oppsettet er et første utkast basert på bildefilene. Det er ikke sammenlignet med en originalside ennå. «Sjekk inn»-knappen er deaktivert inntil en faktisk innsjekkingsfunksjon er spesifisert og koblet til.
+Oppsettet bruker de eksisterende bildefilene og er tilpasset skjermbildene: VIP-merke over navneskiltet, «Pluss 1 stk og gratis inngang», og kursiv informasjon om dørvakt og legitimasjon. Fonten er Arial med Helvetica/sans-serif som reserve.
+
+«Sjekk inn» erstattes ved trykk med en rød melding: `Kan sjekke inn: DD.MM.ÅÅÅÅ kl: HH:MM`. Klokkeslettet hentes idet knappen trykkes og vises i norsk tid, med minutter som i skjermbildet. Tidspunktet beholdes resten av dagen. Ved et nytt døgn skjules den gamle meldingen, dagens dato oppdateres og knappen vises igjen. Oppfriskning av siden nullstiller også meldingen. Dette er lokal visning; det sendes ingen innsjekking til en server.
 
 ## Se siden lokalt
 
